@@ -1,0 +1,73 @@
+flowchart TD
+    subgraph "Frontend"
+        UI[User Interface]
+        AdminUI[Admin Dashboard]
+        Auth[Authentication UI]
+        
+        UI --> |Swipe Interface| CarSwipe[Car Swiping Module]
+        UI --> |Search & Filter| Filter[Filter Module]
+        UI --> |Booking| BookingUI[Booking Interface]
+        UI --> |User Profile| ProfileUI[Profile Management]
+        AdminUI --> |Car Management| CarManageUI[Car Management UI]
+        AdminUI --> |Booking Management| BookingManageUI[Booking Management UI]
+        AdminUI --> |User Management| UserManageUI[User Management UI]
+        AdminUI --> |Analytics| AnalyticsUI[Analytics Dashboard]
+    end
+
+    subgraph "Backend Services"
+        API[API Gateway]
+        AuthService[Authentication Service]
+        CarService[Car Management Service]
+        BookingService[Booking Service]
+        PaymentService[Payment Processing Service]
+        NotificationService[Notification Service]
+        AnalyticsService[Analytics Service]
+        
+        API --> AuthService
+        API --> CarService
+        API --> BookingService
+        API --> PaymentService
+        API --> NotificationService
+        API --> AnalyticsService
+    end
+    
+    subgraph "Database"
+        MongoDB[(MongoDB)]
+        
+        MongoDB --> |Cars Collection| CarsDB[Cars Data]
+        MongoDB --> |Users Collection| UsersDB[Users Data]
+        MongoDB --> |Bookings Collection| BookingsDB[Bookings Data]
+        MongoDB --> |Payments Collection| PaymentsDB[Payments Data]
+    end
+    
+    subgraph "External Services"
+        CloudStorage[Cloud Storage]
+        PaymentGateway[Payment Gateway]
+        EmailService[Email Service]
+        SMSGateway[SMS Gateway]
+    end
+    
+    UI --> API
+    AdminUI --> API
+    Auth --> AuthService
+    
+    AuthService --> MongoDB
+    CarService --> MongoDB
+    BookingService --> MongoDB
+    PaymentService --> MongoDB
+    AnalyticsService --> MongoDB
+    
+    CarService --> CloudStorage
+    PaymentService --> PaymentGateway
+    NotificationService --> EmailService
+    NotificationService --> SMSGateway
+    
+    classDef frontend fill:#4672b4,color:white,stroke:#333,stroke-width:1px
+    classDef backend fill:#47956f,color:white,stroke:#333,stroke-width:1px
+    classDef database fill:#de953e,color:white,stroke:#333,stroke-width:1px
+    classDef external fill:#8b251e,color:white,stroke:#333,stroke-width:1px
+    
+    class UI,AdminUI,Auth,CarSwipe,Filter,BookingUI,ProfileUI,CarManageUI,BookingManageUI,UserManageUI,AnalyticsUI frontend
+    class API,AuthService,CarService,BookingService,PaymentService,NotificationService,AnalyticsService backend
+    class MongoDB,CarsDB,UsersDB,BookingsDB,PaymentsDB database
+    class CloudStorage,PaymentGateway,EmailService,SMSGateway external
