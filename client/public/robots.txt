@@ -1,0 +1,64 @@
+# Dubai Luxury Cars - Robots.txt
+# https://www.dubailuxurycars.com/
+
+# Allow all search engines to index public content
+User-agent: *
+Allow: /
+Allow: /cars
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /terms-of-service
+Allow: /privacy-policy
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /reset-password
+Disallow: /verify-email
+Disallow: /api/
+Disallow: /payment/
+
+# Disallow development/staging environments
+Disallow: /dev/
+Disallow: /staging/
+Disallow: /test/
+
+# Crawl delay recommendation
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://www.dubailuxurycars.com/sitemap.xml
+
+# Specific instructions for Google
+User-agent: Googlebot
+Disallow: /dashboard/
+Disallow: /admin/
+
+# Specific instructions for Bing
+User-agent: Bingbot
+Disallow: /dashboard/
+Disallow: /admin/
+
+# Specific instructions for Facebook crawler
+User-agent: facebookexternalhit
+Allow: /cars
+Allow: /about
+
+# Block AI training crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /

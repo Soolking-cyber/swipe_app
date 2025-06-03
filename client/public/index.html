@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#B8860B" />
+    <meta name="description" content="Experience luxury on Dubai's roads with our premium car rental service. Choose from our exclusive collection of supercars, luxury sedans, and exotic vehicles." />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Dubai Luxury Cars | Premium Car Rental" />
+    <meta property="og:description" content="Rent the world's most prestigious vehicles and make your stay in Dubai truly unforgettable." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:url" content="https://dubailuxurycars.com" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <!-- Web Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Playfair Display & Roboto Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+    <title>Dubai Luxury Cars | Premium Car Rental</title>
+    
+    <style>
+      /* Initial loading styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f8f8f8;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      .initial-loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #1E1E1E;
+        color: #B8860B;
+      }
+      
+      .initial-loader img {
+        width: 120px;
+        margin-bottom: 20px;
+      }
+      
+      .initial-loader h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        margin-bottom: 24px;
+        font-size: 28px;
+        letter-spacing: 1px;
+      }
+      
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(184, 134, 11, 0.2);
+        border-top-color: #B8860B;
+        border-radius: 50%;
+        animation: spin 1s ease-in-out infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this application.</noscript>
+    <div id="root">
+      <!-- Initial loading state before React renders -->
+      <div class="initial-loader">
+        <h1>DUBAI LUXURY CARS</h1>
+        <div class="spinner"></div>
+      </div>
+    </div>
+    
+    <!-- CDN scripts from cloudflare as mentioned in requirements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js" integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

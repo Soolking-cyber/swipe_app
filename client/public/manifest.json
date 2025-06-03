@@ -1,0 +1,82 @@
+{
+  "short_name": "Dubai Luxury Cars",
+  "name": "Dubai Luxury Cars | Premium Car Rental",
+  "description": "Experience luxury on Dubai's roads with our premium car rental service featuring exotic and luxury vehicles.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#B8860B",
+  "background_color": "#1E1E1E",
+  "categories": ["travel", "luxury", "automotive", "transportation"],
+  "screenshots": [
+    {
+      "src": "screenshot1.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
+      "platform": "wide",
+      "label": "Luxury Car Selection"
+    },
+    {
+      "src": "screenshot2.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
+      "platform": "wide",
+      "label": "Car Swipe Interface"
+    },
+    {
+      "src": "screenshot3.jpg",
+      "type": "image/jpeg",
+      "sizes": "750x1334",
+      "platform": "narrow",
+      "label": "Mobile Booking Experience"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.dubailuxurycars",
+      "id": "com.dubailuxurycars"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/dubai-luxury-cars/id123456789"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Browse Cars",
+      "short_name": "Cars",
+      "description": "View our luxury car collection",
+      "url": "/cars",
+      "icons": [{ "src": "car-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "My Bookings",
+      "short_name": "Bookings",
+      "description": "Manage your car rentals",
+      "url": "/dashboard/bookings",
+      "icons": [{ "src": "booking-icon.png", "sizes": "192x192" }]
+    }
+  ],
+  "scope": "/"
+}
